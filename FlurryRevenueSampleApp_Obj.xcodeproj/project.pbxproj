@@ -15,6 +15,7 @@
 		76D3351121652B6A0085DB7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D3350F21652B6A0085DB7D /* LaunchScreen.storyboard */; };
 		76D3351421652B6A0085DB7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D3351321652B6A0085DB7D /* main.m */; };
 		76D3351B216532090085DB7D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D3351A216532090085DB7D /* StoreKit.framework */; };
+		76D3351D216532B80085DB7D /* products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D3351C216532B80085DB7D /* products.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		76D3351221652B6A0085DB7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D3351321652B6A0085DB7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76D3351A216532090085DB7D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		76D3351C216532B80085DB7D /* products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = products.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				76D3350721652B670085DB7D /* ViewController.h */,
 				76D3350821652B670085DB7D /* ViewController.m */,
 				76D3350A21652B670085DB7D /* Main.storyboard */,
+				76D3351C216532B80085DB7D /* products.plist */,
 				76D3350D21652B6A0085DB7D /* Assets.xcassets */,
 				76D3350F21652B6A0085DB7D /* LaunchScreen.storyboard */,
 				76D3351221652B6A0085DB7D /* Info.plist */,
@@ -162,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D3351D216532B80085DB7D /* products.plist in Resources */,
 				76D3351121652B6A0085DB7D /* LaunchScreen.storyboard in Resources */,
 				76D3350E21652B6A0085DB7D /* Assets.xcassets in Resources */,
 				76D3350C21652B670085DB7D /* Main.storyboard in Resources */,
