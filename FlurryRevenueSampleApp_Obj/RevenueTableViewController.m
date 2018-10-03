@@ -29,7 +29,14 @@
                                          withExtension:@"plist"];
     NSArray *productIdentifiers = [NSArray arrayWithContentsOfURL:url];
     self.products = [NSSet setWithArray:productIdentifiers];
-    [self requestProductInformation];
+    
+    //start request
+    if (![SKPaymentQueue canMakePayments]) {
+        return;
+    }
+    SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:self.products];
+    request.delegate = self;
+    [request start];
     
     // record toggle position
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
@@ -47,17 +54,9 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)requestProductInformation{
-    if (![SKPaymentQueue canMakePayments]) {
-        return;
-    }
-    SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:self.products];
-    request.delegate = self;
-    [request start];
-}
-
 #pragma mark - StoreKit delegate + observer
 
+// load all valid requests from app stroe into tableview
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
     self.verifiedProducts = [NSMutableArray array];
     // invalid products
@@ -71,6 +70,7 @@
     [self.tableView reloadData];
 }
 
+// one or more transactions has been updated
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray<SKPaymentTransaction *> *)transactions {
     for (SKPaymentTransaction *transaction in transactions) {
         switch (transaction.transactionState) {
@@ -106,6 +106,7 @@
     
 }
 
+// alert display
 -(void)displayAlertWithTitle:(NSString *)title message:(NSString *)message {
 
     // set alert controller
@@ -179,7 +180,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSLog(@"product id is : %@", self.verifiedProducts[indexPath.row].productIdentifier);
-    //    [self showActionsForProduct:self.verifiedProducts[indexPath.row]];
     if ([SKPaymentQueue canMakePayments]) {
         SKPayment *payment = [SKPayment paymentWithProduct:self.verifiedProducts[indexPath.row]];
         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
