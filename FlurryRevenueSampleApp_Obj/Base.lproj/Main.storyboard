@@ -18,29 +18,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="QrC-w8-wag">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Auto Logging?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvs-sA-InQ">
-                                    <rect key="frame" x="8" y="14" width="147" height="28"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Logging?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb5-1a-sx2">
+                                    <rect key="frame" x="8" y="8" width="110" height="28"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDL-aI-rb8">
-                                    <rect key="frame" x="320" y="13" width="49" height="31"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gP-5Y-dDV">
+                                    <rect key="frame" x="316" y="7" width="51" height="31"/>
                                     <connections>
-                                        <action selector="updateAutoLogSwitch:" destination="dEX-LF-F0a" eventType="valueChanged" id="u8T-Tg-iCS"/>
+                                        <action selector="updateAutoLogSwitch:" destination="dEX-LF-F0a" eventType="valueChanged" id="osr-zO-cUU"/>
                                     </connections>
                                 </switch>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xb5-1a-sx2" secondAttribute="trailing" constant="20" symbolic="YES" id="3YI-LK-TmO"/>
+                                <constraint firstAttribute="trailing" secondItem="8gP-5Y-dDV" secondAttribute="trailing" constant="10" id="AV1-o2-YkF"/>
+                                <constraint firstItem="Xb5-1a-sx2" firstAttribute="leading" secondItem="QrC-w8-wag" secondAttribute="leading" constant="8" id="EIz-np-bZz"/>
+                                <constraint firstItem="8gP-5Y-dDV" firstAttribute="top" secondItem="QrC-w8-wag" secondAttribute="top" constant="7" id="GoC-4Y-CsL"/>
+                                <constraint firstAttribute="bottom" secondItem="Xb5-1a-sx2" secondAttribute="bottom" constant="8" id="g8d-za-Zah"/>
+                                <constraint firstAttribute="bottom" secondItem="8gP-5Y-dDV" secondAttribute="bottom" constant="6" id="gH9-8g-PEa"/>
+                                <constraint firstItem="Xb5-1a-sx2" firstAttribute="top" secondItem="QrC-w8-wag" secondAttribute="top" constant="8" id="nvJ-8l-1v6"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Xfg-fe-E3t" detailTextLabel="6dg-d1-J3k" style="IBUITableViewCellStyleValue1" id="lTS-5P-5Aq">
-                                <rect key="frame" x="0.0" y="111.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lTS-5P-5Aq" id="CHz-Ii-ST9">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -71,7 +78,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Revenue" id="2Lc-nM-tpG"/>
                     <connections>
-                        <outlet property="autoLogSwitch" destination="aDL-aI-rb8" id="rLG-ZU-JbW"/>
+                        <outlet property="autoLogSwitch" destination="8gP-5Y-dDV" id="f1s-UQ-uPu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kB-Nb-S5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
