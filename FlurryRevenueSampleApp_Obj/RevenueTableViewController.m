@@ -47,6 +47,7 @@
         NSLog(@"not found");
         [defaults setBool:YES forKey:@"iapReporting"];
         autoLogSwitch.on = YES;
+        [Flurry setIAPReportingEnabled:YES];
     } else {
         autoLogSwitch.on = [defaults boolForKey:@"iapReporting"];
     }
@@ -149,7 +150,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return self.verifiedProducts.count;
 }
 
@@ -160,7 +160,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     SKProduct *product = self.verifiedProducts[indexPath.row];
-    
+    // config the cell
     cell.textLabel.text = product.localizedTitle;
     if ([product.priceLocale respondsToSelector:@selector(countryCode)]) {
         if (@available(iOS 10.0, *)) {
@@ -173,7 +173,6 @@
             [numberFormatter setLocale:product.priceLocale];
             NSString *formattedString = [numberFormatter stringFromNumber:product.price];
             cell.detailTextLabel.text = formattedString;
-            
         }
     } else {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Price :  %@", product.price];
