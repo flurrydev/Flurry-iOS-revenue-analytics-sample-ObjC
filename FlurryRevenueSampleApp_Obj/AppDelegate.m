@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Flurry.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // get flurry infomation in the file "FlurryMarketingConfig.plist"
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"FlurryMarketingConfig" ofType:@"plist"];
+    NSDictionary *info = [NSDictionary dictionaryWithContentsOfFile:file];
+    
+    // Flurry start
+    NSNumber * crashReport = [info valueForKey:@"enableCrashReport"];
+    BOOL enableCrashReport = [crashReport boolValue];
+    FlurrySessionBuilder* builder = [[[[[[FlurrySessionBuilder new] withLogLevel:FlurryLogLevelDebug]
+                                        withCrashReporting:enableCrashReport]
+                                       withSessionContinueSeconds:[[info objectForKey:@"sessionSeconds"] integerValue]]
+                                      withAppVersion:[info objectForKey:@"appVersion"]]
+                                     withIncludeBackgroundSessionsInMetrics:YES] ;
+    [Flurry startSession:[info objectForKey:@"apiKey"] withSessionBuilder:builder];
     return YES;
 }
 

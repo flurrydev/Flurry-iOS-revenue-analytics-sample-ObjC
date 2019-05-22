@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		3E0D2CFB6003DFAB4B0876E2 /* libPods-FlurryRevenueSampleApp_Obj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ED8148AF8C8FB62A216A87 /* libPods-FlurryRevenueSampleApp_Obj.a */; };
 		76D3350621652B670085DB7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D3350521652B670085DB7D /* AppDelegate.m */; };
-		76D3350921652B670085DB7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D3350821652B670085DB7D /* ViewController.m */; };
 		76D3350C21652B670085DB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D3350A21652B670085DB7D /* Main.storyboard */; };
 		76D3350E21652B6A0085DB7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D3350D21652B6A0085DB7D /* Assets.xcassets */; };
 		76D3351121652B6A0085DB7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D3350F21652B6A0085DB7D /* LaunchScreen.storyboard */; };
 		76D3351421652B6A0085DB7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D3351321652B6A0085DB7D /* main.m */; };
 		76D3351B216532090085DB7D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D3351A216532090085DB7D /* StoreKit.framework */; };
+		76D3351D216532B80085DB7D /* products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D3351C216532B80085DB7D /* products.plist */; };
+		76D3351F2165338A0085DB7D /* FlurryRevenueConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76D3351E2165338A0085DB7D /* FlurryRevenueConfig.plist */; };
+		76D33522216538BC0085DB7D /* RevenueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D33521216538BC0085DB7D /* RevenueTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +26,16 @@
 		76D3350121652B670085DB7D /* FlurryRevenueSampleApp_Obj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlurryRevenueSampleApp_Obj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D3350421652B670085DB7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76D3350521652B670085DB7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		76D3350721652B670085DB7D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		76D3350821652B670085DB7D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		76D3350B21652B670085DB7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76D3350D21652B6A0085DB7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76D3351021652B6A0085DB7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76D3351221652B6A0085DB7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D3351321652B6A0085DB7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76D3351A216532090085DB7D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		76D3351C216532B80085DB7D /* products.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = products.plist; sourceTree = "<group>"; };
+		76D3351E2165338A0085DB7D /* FlurryRevenueConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FlurryRevenueConfig.plist; sourceTree = "<group>"; };
+		76D33520216538BC0085DB7D /* RevenueTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RevenueTableViewController.h; sourceTree = "<group>"; };
+		76D33521216538BC0085DB7D /* RevenueTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RevenueTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,13 @@
 		76D3350321652B670085DB7D /* FlurryRevenueSampleApp_Obj */ = {
 			isa = PBXGroup;
 			children = (
+				76D33520216538BC0085DB7D /* RevenueTableViewController.h */,
+				76D33521216538BC0085DB7D /* RevenueTableViewController.m */,
 				76D3350421652B670085DB7D /* AppDelegate.h */,
 				76D3350521652B670085DB7D /* AppDelegate.m */,
-				76D3350721652B670085DB7D /* ViewController.h */,
-				76D3350821652B670085DB7D /* ViewController.m */,
 				76D3350A21652B670085DB7D /* Main.storyboard */,
+				76D3351C216532B80085DB7D /* products.plist */,
+				76D3351E2165338A0085DB7D /* FlurryRevenueConfig.plist */,
 				76D3350D21652B6A0085DB7D /* Assets.xcassets */,
 				76D3350F21652B6A0085DB7D /* LaunchScreen.storyboard */,
 				76D3351221652B6A0085DB7D /* Info.plist */,
@@ -162,7 +168,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D3351D216532B80085DB7D /* products.plist in Resources */,
 				76D3351121652B6A0085DB7D /* LaunchScreen.storyboard in Resources */,
+				76D3351F2165338A0085DB7D /* FlurryRevenueConfig.plist in Resources */,
 				76D3350E21652B6A0085DB7D /* Assets.xcassets in Resources */,
 				76D3350C21652B670085DB7D /* Main.storyboard in Resources */,
 			);
@@ -196,9 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76D3350921652B670085DB7D /* ViewController.m in Sources */,
 				76D3351421652B6A0085DB7D /* main.m in Sources */,
 				76D3350621652B670085DB7D /* AppDelegate.m in Sources */,
+				76D33522216538BC0085DB7D /* RevenueTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
