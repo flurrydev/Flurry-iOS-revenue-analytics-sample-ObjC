@@ -1,4 +1,4 @@
-# Flurry Revenue Sample Application (Obj Version)
+# Flurry Revenue Sample Application (Obj C Version)
 
 This is an Objective-C version sample app based on Flurry Revenue Analytics service. See [Swift version](https://github.com/flurrydev/Flurry-iOS-revenue-analytics-sample-Swift) here. Flurry Revenue Analtyics can help log transactions for you and present a real-time chart in Flurry Portal.
 
