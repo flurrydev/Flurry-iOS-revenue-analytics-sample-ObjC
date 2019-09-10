@@ -75,7 +75,11 @@
     for (SKProduct *product in response.products) {
         [self.verifiedProducts addObject:product];
     }
-    [self.tableView reloadData];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.tableView reloadData];
+    });
+    
 }
 
 - (NSString *)stringForTransactionRecordStatus:(FlurryTransactionRecordStatus)status {

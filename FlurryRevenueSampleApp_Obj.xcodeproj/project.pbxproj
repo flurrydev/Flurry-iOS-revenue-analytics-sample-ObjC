@@ -23,7 +23,7 @@
 		0739D20824DA7AEBACFD62BB /* Pods-FlurryRevenueSampleApp_Obj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlurryRevenueSampleApp_Obj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlurryRevenueSampleApp_Obj/Pods-FlurryRevenueSampleApp_Obj.debug.xcconfig"; sourceTree = "<group>"; };
 		60316D59FD61F86064F20704 /* Pods-FlurryRevenueSampleApp_Obj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlurryRevenueSampleApp_Obj.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlurryRevenueSampleApp_Obj/Pods-FlurryRevenueSampleApp_Obj.release.xcconfig"; sourceTree = "<group>"; };
 		63ED8148AF8C8FB62A216A87 /* libPods-FlurryRevenueSampleApp_Obj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlurryRevenueSampleApp_Obj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		76D3350121652B670085DB7D /* FlurryRevenueSampleApp_Obj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlurryRevenueSampleApp_Obj.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76D3350121652B670085DB7D /* FlurryRevenueSampleApp_ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlurryRevenueSampleApp_ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D3350421652B670085DB7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76D3350521652B670085DB7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		76D3350B21652B670085DB7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		76D3350221652B670085DB7D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76D3350121652B670085DB7D /* FlurryRevenueSampleApp_Obj.app */,
+				76D3350121652B670085DB7D /* FlurryRevenueSampleApp_ObjC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 			);
 			name = FlurryRevenueSampleApp_Obj;
 			productName = FlurryRevenueSampleApp_Obj;
-			productReference = 76D3350121652B670085DB7D /* FlurryRevenueSampleApp_Obj.app */;
+			productReference = 76D3350121652B670085DB7D /* FlurryRevenueSampleApp_ObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -347,8 +347,9 @@
 			baseConfigurationReference = 0739D20824DA7AEBACFD62BB /* Pods-FlurryRevenueSampleApp_Obj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2ARNJY38FW;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S6JSG6FHB3;
 				INFOPLIST_FILE = FlurryRevenueSampleApp_Obj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,9 +357,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahoo.flurryiap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FlurryRevenueSampleApp_ObjC;
 				PROVISIONING_PROFILE = "90924482-c3bc-4f58-bb4c-48acf8054b84";
-				PROVISIONING_PROFILE_SPECIFIER = FlurryIAPDeveloper;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -368,8 +369,9 @@
 			baseConfigurationReference = 60316D59FD61F86064F20704 /* Pods-FlurryRevenueSampleApp_Obj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 2ARNJY38FW;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S6JSG6FHB3;
 				INFOPLIST_FILE = FlurryRevenueSampleApp_Obj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -377,9 +379,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yahoo.flurryiap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FlurryRevenueSampleApp_ObjC;
 				PROVISIONING_PROFILE = "90924482-c3bc-4f58-bb4c-48acf8054b84";
-				PROVISIONING_PROFILE_SPECIFIER = FlurryIAPDeveloper;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
